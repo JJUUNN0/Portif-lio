@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <div>
+                <a href="index.html" class="main-header__brand">
+                    Sophia Camargo
+                </a>
+                <div class="main-nav">
+                    <ul class="main-nav__items">
+                        <li class="main-nav__item">
+                            <a href="about/index.html">About</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="contact/index.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

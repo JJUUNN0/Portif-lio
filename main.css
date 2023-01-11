@@ -26,14 +26,12 @@
     text-align: center;
 }
 
-.plan {
-    background: #f9ffd5;
-    text-align: center;
-    padding: 16px;
-    margin: 8px;
-    display: inline-block;
+.plan { 
+    padding: 0px;
+    margin: 0;
     width: 30%;
     vertical-align: middle;
+
 }
 
 .plan__image {

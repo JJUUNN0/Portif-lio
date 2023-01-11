@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     background: #1a7b3400;
-    padding: 8px 60px;
+    padding: 60px 100px;
     z-index: 1;
 }
 
@@ -26,9 +26,11 @@ body {
     color: #000000;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 40px;
     height: 22px;
     display: inline-block;
+    line-height: inherit;
+    margin-left: 100px;
 }
 
 .main-header__brand img {
@@ -37,14 +39,12 @@ body {
 
 .main-nav {
     display: inline-block;
-    text-align: right;
-    width: calc(100% - 74px);
+    text-align: center;
     vertical-align: middle;
 }
 
 .main-nav__items {
-    margin: 0;
-    padding: 0;
+    margin-left: 700px;
     list-style: none;
 }
 
