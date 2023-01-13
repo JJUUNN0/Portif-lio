@@ -12,16 +12,16 @@
     <header class="main-header">
         <nav>
             <div>
-                <a href="index.html" class="main-header__brand">
+                <a href="../index.html" class="main-header__brand">
                     Sophia Camargo
                 </a>
                 <div class="main-nav">
                     <ul class="main-nav__items">
                         <li class="main-nav__item">
-                            <a href="about/index.html">About</a>
+                            <a href="../about/index.html">About</a>
                         </li>
                         <li class="main-nav__item">
-                            <a href="contact/index.html">Contact</a>
+                            <a href="../contact/index.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -29,35 +29,60 @@
         </nav>
     </header>
 
-    <h3>Contact Form</h3>
-
     <div class="container">
-        <form  onsubmit="getFormValues(event)">
-          <label for="name">Name</label>
-          <input required type="text" id="name" name="name" placeholder="Your name..">
-      
-          <label for="email">Email</label>
-          <input required type="email" id="email" name="email" placeholder="Your email..">
-      
-          <label for="subject">Subject</label>
-          <textarea required id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
+        <form id="contact-form">
+            <div class="name">
+                <label for="name">Name</label>
+                <input required type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input required type="email" id="email" name="email" placeholder="Your email..">
+            </div>
+            <div class="subject">
+                <label for="subject">Message</label>
+                <textarea required id="subject" name="subject" placeholder="Write something.."
+                    style="height:200px"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
         </form>
-      </div>
-      
-      <script>
-      function getFormValues(event) {
-        event.preventDefault();
-        let name = document.getElementById("name").value;
-        let email = document.getElementById("email").value;
-        let subject = document.getElementById("subject").value;
-        console.log(event);
-        if(name && email && subject) {
-            event.target.reset();
-        }
-      }
-      </script>
+    </div>
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+
+            if (name && email && subject) {
+                try {
+                    const response = await fetch('https://formspree.io/f/mpzezenz', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            replyto: email,
+                            subject: subject,
+                            message: name
+                        })
+                    });
+                    if (response.ok) {
+                        console.log('Form sent!');
+                        form.reset();
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        });
+
+    </script>
+
+    <footer class="main-footer">
+        <p class="copyright">&copy; Sophia</p>
+    </footer>
 
 </body>
 
