@@ -6,14 +6,13 @@ body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
 }
-
 .main-header {
     width: 100%;
     position: static;
     top: 0;
     left: 0;
     background: #1a7b3400;
-    padding: 60px 100px;
+    padding: 60px 100px 5px;
     z-index: 1;
 }
 
@@ -31,6 +30,7 @@ body {
     display: inline-block;
     line-height: inherit;
     margin-left: 100px;
+    
 }
 
 .main-header__brand img {
@@ -66,21 +66,32 @@ body {
     border-bottom: 3px solid rgb(0, 0, 0);
 }
 
-.container {
-    padding-top: 97px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  .footer {
-    background-color: black;
-    color: white;
-    margin-top: auto;
-    height: 92px;
+.main-footer {
+    background: rgb(0, 0, 0);
+    padding: 32px;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
-  }
+}
+
+.main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-footer__link a {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
+}
 
 .button {
     background: #0e4f1f;

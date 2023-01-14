@@ -12,22 +12,37 @@ input[type=text], [type=email], select, textarea {
   resize: vertical;
 }
 
-input[type=submit] {
-  background-color: #04AA6D;
+.button {
+  background: #0e4f1f;
   color: white;
-  padding: 12px 20px;
-  border: none;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 4px;
   border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
+  font-size: 15px;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+.button:hover,
+.button:active {
+  background: white;
+  color: #0e4f1f;
 }
 
-.container {
+.container {  
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background:linear-gradient(to top, hsl(0, 2%, 62%) 10%, transparent) ;
+  padding-top: 97px;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-items: flex-start; 
+  justify-content: space-evenly;
 }
+
+
+
+
 

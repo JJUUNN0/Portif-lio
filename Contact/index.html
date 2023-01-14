@@ -30,7 +30,11 @@
     </header>
 
     <div class="container">
+        <div>
+            <img src="../images/foto.PNG" class="image">
+        </div>
         <form id="contact-form">
+
             <div class="name">
                 <label for="name">Name</label>
                 <input required type="text" id="name" name="name" placeholder="Your name..">
@@ -44,10 +48,11 @@
                 <textarea required id="subject" name="subject" placeholder="Write something.."
                     style="height:200px"></textarea>
             </div>
-            <div class="button">
-                <button type="submit">Submit</button>
+            <div >
+                <button class="button" >Submit</button>
             </div>
         </form>
+
     </div>
     <script>
         const form = document.getElementById('contact-form');
@@ -71,6 +76,7 @@
                     if (response.ok) {
                         console.log('Form sent!');
                         form.reset();
+                        alert("form sent")
                     }
                 } catch (error) {
                     console.error(error);
@@ -79,11 +85,18 @@
         });
 
     </script>
-
     <footer class="main-footer">
-        <p class="copyright">&copy; Sophia</p>
+        <nav>
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
+                    <a href="#">Support</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
     </footer>
-
 </body>
 
 </html>
