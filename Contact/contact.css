@@ -2,13 +2,13 @@ body {font-family: 'Roboto Mono', monospace;}
 * {box-sizing: border-box;}
 
 #contact-form {
-  padding-right: 500px;
+  padding-right: 600px;
 }
 
 input[type=text], [type=email], select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -18,10 +18,10 @@ input[type=text], [type=email], select, textarea {
 }
 
 .button {
-  background: #0e4f1f;
+  background: #9f9f9f;
   color: white;
   font: inherit;
-  border: 1.5px solid #0e4f1f;
+  border: 1px solid #232423;
   padding: 4px;
   border-radius: 4px;
   font-weight: bold;
@@ -32,7 +32,7 @@ input[type=text], [type=email], select, textarea {
 .button:hover,
 .button:active {
   background: white;
-  color: #0e4f1f;
+  color: #000000;
 }
 
 .container {  
@@ -47,8 +47,11 @@ input[type=text], [type=email], select, textarea {
   justify-content: space-evenly;
 }
 
+.space {
+  padding-left: 300px;
+}
 .image {
-  padding-left: 400px;
+
 }
 
 .frases {
