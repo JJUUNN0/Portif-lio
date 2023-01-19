@@ -20,27 +20,24 @@
     left: 8%;
 }
 
-.plan__list {
-    width: 80%;
-    margin: 60px;
+#images {    
     text-align: center;
+}
+
+.images__list {
+    float: none;
+    vertical-align: top;
     display: flex;
-    justify-content: end;
+    zoom: 1;
+    margin: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch; 
 }
 
-.plan { 
-    padding: 0px;
-    margin: 0;
-    width: 30%;
-    vertical-align: middle;
-}
-
-.plan__image {
-    width: 90%; 
-}
-
-.plan__feature {
-    margin: 8px 0;
+.gato__image {
+  
 }
 
 #key-features {
